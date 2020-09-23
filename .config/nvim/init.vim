@@ -54,6 +54,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 nmap <C-P> :FZF<CR>
+nmap <C-F> :Rg<space>
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ' '
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:NERDTreeDirArrowExpandable = "\u00a0"
