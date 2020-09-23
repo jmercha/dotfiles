@@ -102,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 
 if [ "$TMUX" = "" ]; then tmux; fi
+
+alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation"
