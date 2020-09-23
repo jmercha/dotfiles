@@ -10,12 +10,6 @@ export ZSH="/home/john/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="dracula-pro"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -42,10 +36,10 @@ ZSH_THEME="dracula-pro"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -103,4 +97,5 @@ alias vim=nvim
 
 if [ "$TMUX" = "" ]; then tmux; fi
 
-alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation"
+alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /dynamic-resolution"
+
