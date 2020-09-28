@@ -12,6 +12,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'gorodinskiy/vim-coloresque'
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
@@ -20,6 +21,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'camspiers/lens.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'preservim/tagbar'
 Plug 'jremmen/vim-ripgrep'
 
 let g:coc_global_extensions = [
@@ -41,6 +43,8 @@ call plug#end()
 set encoding=UTF-8
 set number
 syntax enable
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 let g:dracula_colorterm = 0
 colorscheme dracula_pro
 
@@ -54,7 +58,8 @@ nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 nmap <C-P> :FZF<CR>
-nmap <C-F> :Rg<space>
+nmap <C-T> :Rg<space>
+ 
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ' '
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:NERDTreeDirArrowExpandable = "\u00a0"
@@ -73,4 +78,7 @@ set mouse=a
 " Set clipboard
 set clipboard=unnamedplus
 
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 
+nmap <F8> :TagbarToggle<CR>

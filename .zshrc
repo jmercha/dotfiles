@@ -36,7 +36,7 @@ ZSH_THEME="dracula-pro"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -97,5 +97,11 @@ alias vim=nvim
 
 if [ "$TMUX" = "" ]; then tmux; fi
 
-alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /dynamic-resolution"
+alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /w:2560 /h:1440"
 
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
+export MOZ_ENABLE_WAYLAND=1
