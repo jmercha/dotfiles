@@ -1,2 +1,2 @@
 # dotfiles
-Configuration files for the software I use
+Configuration files for the software I use on my computer.
