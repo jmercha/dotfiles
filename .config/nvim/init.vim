@@ -23,7 +23,10 @@ Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'preservim/tagbar'
+Plug 'wfxr/minimap.vim'
+Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'jremmen/vim-ripgrep'
+Plug 'bagrat/vim-buffet'
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver'
@@ -83,3 +86,10 @@ set clipboard=unnamedplus
 nmap <leader>rn <Plug>(coc-rename)
 
 nmap <F8> :TagbarToggle<CR>
+
+augroup ScrollbarInit
+  autocmd!
+  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+  autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
+augroup end
