@@ -26,7 +26,6 @@ Plug 'preservim/tagbar'
 Plug 'wfxr/minimap.vim'
 Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'jremmen/vim-ripgrep'
-Plug 'bagrat/vim-buffet'
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver'
@@ -93,3 +92,7 @@ augroup ScrollbarInit
   autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
   autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
 augroup end
+
+
+let g:minimap_auto_start = 1
+let g:airline#extensions#tabline#enabled = 1

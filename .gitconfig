@@ -1,0 +1,17 @@
+[user]
+	signingkey = CDA1DC5FAB36FAB4
+	name = John Merchant
+	email = john@jmercha.dev
+[credential]
+	helper = store
+[merge]
+	tool = nvim
+[mergetool]
+	path = nvim
+[core]
+	editor = nvim
+	excludesFile = ~/.gitignore
+[mergetool]
+	prompt = false
+[mergetool "nvim"]
+	cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
