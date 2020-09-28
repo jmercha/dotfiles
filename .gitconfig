@@ -10,7 +10,7 @@
 	path = nvim
 [core]
 	editor = nvim
-	excludesFile = ~/.gitignore
+	excludesFile = ~/.gitignore_global
 [mergetool]
 	prompt = false
 [mergetool "nvim"]

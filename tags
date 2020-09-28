@@ -15,14 +15,17 @@
 <F8>	.config/nvim/init.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
 <cr>	.config/nvim/init.vim	/^inoremap <expr> <cr> pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
 <leader>rn	.config/nvim/init.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
+ScrollbarInit	.config/nvim/init.vim	/^augroup ScrollbarInit$/;"	a
 dotfiles	README.md	/^# dotfiles$/;"	c
 g:NERDTreeDirArrowCollapsible	.config/nvim/init.vim	/^let g:NERDTreeDirArrowCollapsible = "\\u00a0"$/;"	v
 g:NERDTreeDirArrowExpandable	.config/nvim/init.vim	/^let g:NERDTreeDirArrowExpandable = "\\u00a0"$/;"	v
 g:NERDTreeIgnore	.config/nvim/init.vim	/^let g:NERDTreeIgnore = ['^node_modules$']$/;"	v
 g:WebDevIconsNerdTreeBeforeGlyphPadding	.config/nvim/init.vim	/^let g:WebDevIconsNerdTreeBeforeGlyphPadding = ' '$/;"	v
 g:WebDevIconsUnicodeGlyphDoubleWidth	.config/nvim/init.vim	/^let g:WebDevIconsUnicodeGlyphDoubleWidth = 1$/;"	v
+g:airline#extensions#tabline#enabled	.config/nvim/init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
 g:coc_global_extensions	.config/nvim/init.vim	/^  let g:coc_global_extensions += ['coc-eslint']$/;"	v
 g:coc_global_extensions	.config/nvim/init.vim	/^  let g:coc_global_extensions += ['coc-prettier']$/;"	v
 g:coc_global_extensions	.config/nvim/init.vim	/^let g:coc_global_extensions = [$/;"	v
 g:dracula_colorterm	.config/nvim/init.vim	/^let g:dracula_colorterm = 0$/;"	v
+g:minimap_auto_start	.config/nvim/init.vim	/^let g:minimap_auto_start = 1$/;"	v
 jk	.config/nvim/init.vim	/^inoremap jk <ESC>$/;"	m
