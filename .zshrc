@@ -105,3 +105,7 @@ compinit
 kitty + complete setup zsh | source /dev/stdin
 
 export MOZ_ENABLE_WAYLAND=1
+
+# FZF
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh

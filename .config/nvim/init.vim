@@ -24,7 +24,6 @@ Plug 'camspiers/lens.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'preservim/tagbar'
 Plug 'wfxr/minimap.vim'
-Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'jremmen/vim-ripgrep'
 
 let g:coc_global_extensions = [
@@ -85,14 +84,6 @@ set clipboard=unnamedplus
 nmap <leader>rn <Plug>(coc-rename)
 
 nmap <F8> :TagbarToggle<CR>
-
-augroup ScrollbarInit
-  autocmd!
-  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-  autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
-augroup end
-
 
 let g:minimap_auto_start = 1
 let g:airline#extensions#tabline#enabled = 1
