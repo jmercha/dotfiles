@@ -110,4 +110,4 @@ export MOZ_ENABLE_WAYLAND=1
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-export MESA_WHICH_LLVM=aur llvm-minimal-git
+export MESA_WHICH_LLVM="aur llvm-minimal-git"
