@@ -112,3 +112,5 @@ source /usr/share/fzf/completion.zsh
 
 # AUR use llvm-minimal-git for libmesa
 export MESA_WHICH_LLVM=1
+
+source ~/.zshrc.local
