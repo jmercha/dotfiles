@@ -71,7 +71,6 @@ plugins=(
 	dotnet
 	fzf
 	gitignore
-	git-prompt
 	node
 	yarn
 )

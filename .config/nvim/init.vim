@@ -22,11 +22,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'camspiers/lens.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'preservim/tagbar'
-Plug 'wfxr/minimap.vim'
 Plug 'jremmen/vim-ripgrep'
-
 let g:coc_global_extensions = [
-  \ 'coc-tsserver'
+  \ 'coc-tsserver',
+  \ 'coc-svelte'
   \ ]
 
 Plug 'junegunn/fzf'
@@ -44,8 +43,8 @@ call plug#end()
 set encoding=UTF-8
 set number
 syntax enable
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+autocmd BufEnter *.{js,jsx,ts,tsx,svelte} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx,svelte} :syntax sync clear
 let g:dracula_colorterm = 0
 colorscheme dracula_pro
 
@@ -84,5 +83,4 @@ nmap <leader>rn <Plug>(coc-rename)
 
 nmap <F8> :TagbarToggle<CR>
 
-let g:minimap_auto_start = 1
 let g:airline#extensions#tabline#enabled = 1
