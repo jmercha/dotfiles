@@ -108,7 +108,7 @@ alias vim=nvim
 
 if [ "$TMUX" = "" ]; then tmux; fi
 
-alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /w:2560 /h:1440"
+alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /w:2560 /h:1440 +async-channels"
 
 autoload -Uz compinit
 compinit

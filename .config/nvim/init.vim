@@ -25,7 +25,8 @@ Plug 'preservim/tagbar'
 Plug 'jremmen/vim-ripgrep'
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
-  \ 'coc-svelte'
+  \ 'coc-svelte',
+  \ 'coc-omnisharp'
   \ ]
 
 Plug 'junegunn/fzf'
