@@ -112,16 +112,26 @@ alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /w:25
 
 autoload -Uz compinit
 compinit
+
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+if type "$kitty" > /dev/null; then
+	kitty + complete setup zsh | source /dev/stdin
+fi
 
 export MOZ_ENABLE_WAYLAND=1
 
 # FZF
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+if [ -d "/usr/share/fzf" ]; then
+	source /usr/share/fzf/key-bindings.zsh
+	source /usr/share/fzf/completion.zsh
+elif [ -d "/usr/share/doc/fzf" ]; then
+	source /usr/share/doc/fzf/examples/key-bindings.zsh
+	source /usr/share/doc/fzf/examples/completion.zsh
+else
+	echo "zshrc: fzf not found"
+fi
 
 # AUR use llvm-minimal-git for libmesa
 export MESA_WHICH_LLVM=1
 
-source ~/.zshrc.local
+[ -d "~/.zshrc.local" ] && source ~/.zshrc.local
