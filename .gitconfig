@@ -11,6 +11,7 @@
 [core]
 	editor = nvim
 	excludesFile = ~/.gitignore_global
+	autocrlf = input
 [mergetool]
 	prompt = false
 [mergetool "nvim"]

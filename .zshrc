@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/john/.oh-my-zsh"
+export ZSH=`realpath ~/.oh-my-zsh`
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,7 +108,7 @@ alias vim=nvim
 
 if [ "$TMUX" = "" ]; then tmux; fi
 
-alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /w:2560 /h:1440 +async-channels"
+alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /w:2560 /h:1408 +async-channels"
 
 autoload -Uz compinit
 compinit
@@ -135,3 +135,6 @@ fi
 export MESA_WHICH_LLVM=1
 
 [ -d "~/.zshrc.local" ] && source ~/.zshrc.local
+
+LOCAL_BIN=`realpath ~/.local/bin`
+export PATH="$PATH:$LOCAL_BIN"
