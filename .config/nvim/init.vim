@@ -1,4 +1,10 @@
-call plug#begin('~/.vim/plugged')
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
@@ -28,8 +34,16 @@ call plug#end()
 set encoding=UTF-8
 set number
 syntax enable
-let g:dracula_colorterm = 0
-colorscheme dracula_pro
+
+function! s:hascolorscheme(name) abort
+    let pat = 'colors/'.a:name.'.vim'
+    return !empty(globpath(&rtp, pat))
+endfunction
+
+if s:hascolorscheme('dracula_pro')
+  let g:dracula_colorterm = 0
+  colorscheme dracula_pro
+endif
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
