@@ -9,11 +9,6 @@ Plug 'vim-airline/vim-airline'
 Plug '~/.config/nvim/plugins/dracula-pro'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -24,28 +19,15 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'preservim/tagbar'
 Plug 'jremmen/vim-ripgrep'
 let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-svelte',
-  \ 'coc-omnisharp'
   \ ]
 
 Plug 'junegunn/fzf'
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  let g:coc_global_extensions += ['coc-eslint']
-endif
 
 call plug#end()
 
 set encoding=UTF-8
 set number
 syntax enable
-autocmd BufEnter *.{js,jsx,ts,tsx,svelte} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx,svelte} :syntax sync clear
 let g:dracula_colorterm = 0
 colorscheme dracula_pro
 
