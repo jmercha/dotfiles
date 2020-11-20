@@ -9,13 +9,15 @@ export ZSH=`realpath ~/.oh-my-zsh`
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-if [ "$TERM" = "vt220" ]; then
+if [ "$TERM" = "vt220" ]
+then
 	ZSH_THEME="alanpeabody"
-elif [ -f "~/.oh-my-zsh/themes/dracula-pro.zsh-theme" ]; then
+elif [ -f ~/.oh-my-zsh/themes/dracula-pro.zsh-theme ]
+then
 	ZSH_THEME="dracula-pro"
 else
 	ZSH_THEME="agnoster"
-fi;
+fi
 
 
 
