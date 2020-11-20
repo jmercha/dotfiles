@@ -9,11 +9,13 @@ export ZSH=`realpath ~/.oh-my-zsh`
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-if ["$TERM" = "vt220"] 
-	ZSH_THEME=""
-else
+if [ "$TERM" = "vt220" ]; then
+	ZSH_THEME="alanpeabody"
+elif [ -f "~/.oh-my-zsh/themes/dracula-pro.zsh-theme" ]; then
 	ZSH_THEME="dracula-pro"
-fi
+else
+	ZSH_THEME="agnoster"
+fi;
 
 
 
@@ -113,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim=nvim
 
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ] && [ "$TERM" != "vt220" ]; then tmux; fi
 
 alias connect-workstation="wlfreerdp /u:jmerchant /v:workstation /workarea /w:2560 /h:1408 +async-channels"
 
